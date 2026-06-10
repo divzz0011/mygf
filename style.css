@@ -1,0 +1,251 @@
+/* Reset & Base Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe5ec, #ffc2d1, #f7aef8);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.font-aesthetic {
+    font-family: 'Sacramento', cursive;
+    color: #d63384;
+    font-weight: bold;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 40px 25px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(214, 51, 132, 0.15);
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    z-index: 10;
+}
+
+/* Kotak Amplop Awal */
+.envelope-box {
+    padding: 30px 15px;
+    border: 2px dashed #ff758f;
+    border-radius: 20px;
+    background: #fff0f3;
+}
+
+.envelope-box h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.envelope-box p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.heart-icon {
+    font-size: 50px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* Tombol Pink Romantis */
+button {
+    background: linear-gradient(45deg, #ff477e, #ff758f);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(255, 71, 126, 0.4);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 71, 126, 0.6);
+}
+
+/* Konten Utama (Awalnya Sembunyi) */
+.konten-romantis {
+    display: none;
+    animation: scaleUp 1s ease forwards;
+}
+
+@keyframes scaleUp {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Desain Kertas Surat */
+.surat-cinta {
+    font-size: 15px;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin: 25px 0;
+    text-align: left;
+    background: #fff9fa;
+    padding: 25px;
+    border-left: 5px solid #ff477e;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+    min-height: 100px;
+}
+
+/* Galeri Foto Gaya Polaroid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.polaroid {
+    background: white;
+    padding: 12px 12px 20px 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.polaroid .caption {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.8rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Efek kemiringan acak polaroid biar estetik */
+.polaroid:nth-child(odd) { transform: rotate(-2deg); }
+.polaroid:nth-child(even) { transform: rotate(2deg); }
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    box-shadow: 0 15px 30px rgba(214, 51, 132, 0.2);
+    z-index: 5;
+}
+
+/* Container Elemen Hati Berjatuhan */
+.heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.falling-heart {
+    position: absolute;
+    color: #ff477e;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+}
+
+/* Style untuk Pop-up / Lightbox Foto */
+.overlay-foto {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.overlay-foto img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+}
+
+.tombol-tutup {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Style Tombol Kontrol Musik Melayang */
+.music-control-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    color: #d63384;
+    border: 2px solid #ff477e;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.music-control-btn:hover {
+    transform: scale(1.05);
+    background: #ff477e;
+    color: white;
+}

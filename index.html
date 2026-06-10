@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARI HENGKER EP EP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="backsound" src="lagu.mp3" loop></audio>
+
+    <!-- TOMBOL KONTROL MUSIK -->
+    <button id="btnMusik" class="music-control-btn" onclick="toggleMusik()">🎵 Pause</button>
+
+    <div class="heart-container" id="heartContainer"></div>
+
+    <div class="container">
+        <div id="tombolBuka" class="envelope-box">
+            <div class="heart-icon">💖</div>
+            <h1 class="font-aesthetic">Selamat Ulang Tahun Sayaanggggg</h1>
+            <p>Cieeeeeeeeeee udaa legaall nii @hengker_ep_ep</p>
+            <button onclick="bukaPesan()">Buka Surat ✨</button>
+        </div>
+
+        <div id="kontenUtama" class="konten-romantis">
+            <h1 class="font-aesthetic" style="font-size: 3.5rem; margin-bottom: 10px;">Surat spesial pake telor</h1>
+            
+            <div class="surat-cinta" id="teksKetik"></div>
+            
+            <h3 style="color: #d63384; font-weight: 600; margin-top: 30px;">Galeri</h3>
+            <p style="font-size: 11px; color: #888; margin-bottom: 15px;">(Klik foto untuk memperbesar)</p>
+            
+            <div class="gallery">
+                <div class="polaroid" onclick="perbesarFoto(this)">
+                    <img src="foto1.jpeg" alt="Momen 1">
+                    <div class="caption">Momen Tak Terlupakan</div>
+                </div>
+                <div class="polaroid" onclick="perbesarFoto(this)">
+                    <img src="foto2.jpeg" alt="Momen 2">
+                    <div class="caption">Baju Adat</div>
+                </div>
+                <div class="polaroid" onclick="perbesarFoto(this)">
+                    <img src="foto3.jpeg" alt="Momen 3">
+                    <div class="caption">Bingung Pose</div>
+                </div>
+                <div class="polaroid" onclick="perbesarFoto(this)">
+                    <img src="foto4.jpeg" alt="Momen 4">
+                    <div class="caption">Outfit Kantoran</div>
+                </div>
+                <div class="polaroid" onclick="perbesarFoto(this)">
+                    <img src="foto5.jpeg" alt="Momen 5">
+                    <div class="caption">Momen Kamu Tampil</div>
+                </div>
+                <div class="polaroid" onclick="perbesarFoto(this)">
+                    <img src="foto6.jpeg" alt="Momen 6">
+                    <div class="caption">Momen Kamu di Catok</div>
+                </div>
+                <div class="polaroid" onclick="perbesarFoto(this)">
+                    <img src="foto7.jpeg" alt="Momen 7">
+                    <div class="caption">Gemaaaasssss</div>
+                </div>
+                <div class="polaroid" onclick="perbesarFoto(this)">
+                    <img src="foto8.jpeg" alt="Momen 8">
+                    <div class="caption">Yang Ini Kepencet Heheee Sumpahh</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupFoto" class="overlay-foto" onclick="tutupFoto()">
+        <span class="tombol-tutup">&times;</span>
+        <img id="imgPopup" src="" alt="Preview">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
