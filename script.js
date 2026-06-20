@@ -1,7 +1,7 @@
 // ISI PESAN UCAPAN
 const pesanRomantis = `Haii sayaangg 🌸
 
-ciee udaa legal (percuma uda legal tapi belum bsa naik motorr whehwweh), sayaaangg gaa kerasaaa udaaa sekitarr semblilan bulan kita bersamaa
+ciee udaa legal (percuma uda legal tapi belum bsa naik motorr whehwweh), sayaaang maafin aku yaa akuuu gaa pernahh ajak kamuuu jalan kemanaa manaaa akuu gabisaaa kayaaa orangg orangg di luaarr sanaaa maafiinn akuu 
 maafin akuu yaaa kalau aku  selalu bikin kamu marahh, nangisss, keselll maafiin yaaa. akuu jugaa minta maaf kalau akuu seringg marahh marahh kee kamuu
 aakuuu sayaanggggggg samaaa kamuuuuuu jadiiiiii diii hari sepesial pake telor ini aku mau ngucapin SELAMAT ULANG TAHUN SAYAANGGGGG semogaaa kaamuuu 
 diberi kesehataannn selaluuu, panjaanggg umurnyaaa. ini kadoo dariiii akuuuu semogaaa kaamuuu suukaaa yaaaa sayaangg 
